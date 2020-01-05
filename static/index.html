@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Chat client</title>
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="chat.js"></script>
+<script src="private.js"></script>
+<script src="client.js"></script>
+<script src="rooms.js"></script>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8"></link>
+</head>
+<body>
+    <div id="wrapper">
+        <h1 id="heading">Websockets Chat</h1>
+        <div id="chatwindow">
+            <div id="contactlist">
+                <h2>Contact list</h2>
+                <ul>
+                </ul>
+            </div>
+            <h2 class="room">Room</h2>
+            <div id="output">
+            </div>
+        </div>
+        <div id="controls">
+            <input type="text" id="message"/><button id="bt_send">Send</button><br/>
+            <input type="text" id="nick"/><button id="bt_nick">Change nick</button>
+        </div>
+        <div id="about">
+            Source code in <a href="https://github.com/ktzar/sockets-chat">GitHub</a>
+        </div>
+    </div>
+</body>
+</html>

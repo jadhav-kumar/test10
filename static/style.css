@@ -1,0 +1,157 @@
+@import url("font-awesome.css");
+body{
+    font-family: Arial, sans;
+    background: #7B7F63;
+    color: #black;
+}
+h1,h2{
+    background: #11A883;
+    color: white;
+    padding:0.25em;
+    margin:0px;
+}
+#wrapper{
+    background: white;
+    width:60%;
+    margin:0px auto;
+    padding:0em;
+    box-shadow:0px 0px 20px #000;
+    font-size:12px;
+}
+@media all and (max-width: 1000px) { 
+    #wrapper {
+        width: 80%;
+    } 
+}
+@media all and (max-width: 640px) { 
+    #wrapper {
+        width: 100%;
+    } 
+}
+
+#chatwindow{
+    margin: 1em 1em 0em;
+}
+#contactlist{
+    float: right;
+    height: 20em;
+    overflow: auto;
+    border:1px solid grey;
+    width: 40%;
+}
+#contactlist ul{
+    list-style: none;
+    padding-left:0.5em;
+    margin: 0px;
+}
+#output{
+    height: 17.5em;
+    overflow: auto;
+    border:1px solid grey;
+}
+#output .status{
+    font-style: italic;
+}
+#output .message{
+    display: block;
+}
+#output .nick{
+    font-weight: bold;
+}
+#output .nick:after{
+    content: ': ';
+}
+
+#controls{
+    margin: 0em 1em;
+}
+input {
+    border: 1px solid grey;
+    margin: 0px;
+}
+#about{
+    text-align: center;
+    padding:0.5em;
+}
+
+.private{
+    position: fixed;
+    bottom:0px;
+    height:200px;
+    width: 180px;
+    z-index:9;
+    background: white;
+    box-shadow:0px 0px 20px #000;
+}
+.private .icon-chevron-up{
+    display: none;
+}
+.private .conversation{
+    height: 160px;
+    background: #ddd;
+    overflow:auto;
+    font-size:10px;
+}
+.private.minimised .conversation{
+    height: 0px;
+}
+.private h2{
+    font-size: 10px;
+}
+.private h2 i{
+    float: right;
+}
+.private input{
+    border:0px;
+}
+.private.minimised .input{
+    height: 0px;
+}
+.private.minimised{
+    height: 30px;
+}
+.private.minimised .icon-chevron-down{
+    display: none;
+}
+.private.minimised .icon-chevron-up{
+    display: block;
+}
+
+/* Room selector */
+#room_selector{
+    position: fixed;
+    top:0px;
+    width:100%;
+    height:100%;
+    z-index:9;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+}
+#room_selector ul{
+    position: absolute;
+    top:30%;
+    left:30%;
+    width:40%;
+    z-index:9;
+    background: white;
+    box-shadow:0px 0px 20px #000;
+    padding-left:0px;
+    list-style: none;
+}
+#room_selector ul li{
+    float:left;
+    width: 100px;
+    background:#ccc;
+    border-radius:5px;
+    margin:0.5em;
+    padding:0.5em;
+    cursor: pointer;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+}
+#room_selector ul li:hover{
+    background: #eee;
+}
+
